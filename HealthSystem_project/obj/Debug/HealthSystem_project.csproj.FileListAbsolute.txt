@@ -1,0 +1,8 @@
+C:\Users\w0526843\HealthSystem_project\HealthSystem_project\bin\Debug\HealthSystem_project.exe.config
+C:\Users\w0526843\HealthSystem_project\HealthSystem_project\bin\Debug\HealthSystem_project.exe
+C:\Users\w0526843\HealthSystem_project\HealthSystem_project\bin\Debug\HealthSystem_project.pdb
+C:\Users\w0526843\HealthSystem_project\HealthSystem_project\obj\Debug\HealthSystem_project.csproj.AssemblyReference.cache
+C:\Users\w0526843\HealthSystem_project\HealthSystem_project\obj\Debug\HealthSystem_project.csproj.CoreCompileInputs.cache
+C:\Users\w0526843\HealthSystem_project\HealthSystem_project\obj\Debug\HealthSystem_project.exe
+C:\Users\w0526843\HealthSystem_project\HealthSystem_project\obj\Debug\HealthSystem_project.pdb
+C:\Users\w0526843\HealthSystem_project\HealthSystem_project\obj\Debug\HealthSystem_project.exe.config
