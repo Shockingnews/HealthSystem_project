@@ -56,23 +56,24 @@ namespace HealthSystem_project
                 {
                     health += shield;
                     shield = 0;
-                    if (health <= 0)
-                    {
-                        lives -= 1;
-                        health = 100;
-                    }
+                    Revive();
                 }
             }
             else if(shield <= 0)
             {
                 health -= damage;
-                if (health <= 0)
-                {
-                    lives -= 1;
-                    health = 100;
-                }
+                Revive();
             }
             
+        }
+        static void Revive()
+        {
+            if (health <= 0)
+            {
+                lives -= 1;
+                health = 100;
+                Console.WriteLine($"Lost a life you have {lives} lives left");
+            }
         }
     }
 }
