@@ -13,13 +13,15 @@ namespace HealthSystem_project
         static int lives = 3;
         static int xp = 0;
         static int level = 1;
+        static int xprequierd = 100;
         static void Main(string[] args)
         {
             //
             //
             //
-            TakeDamage(200);
+            TakeDamage(-200);
             Heal(50);
+            IncreaseXP(150);
             RegenerateShield(200);
             ShowHUD();
 
@@ -28,7 +30,7 @@ namespace HealthSystem_project
 
         static void ShowHUD()
         {
-            Console.WriteLine($"Health: {health}  Shield: {shield}  Lives: {lives}");
+            Console.WriteLine($"Health: {health}  Shield: {shield}  Lives: {lives}     Xp: {xp}    Level: {level}");
             if(health <= 10)
             {
                 Console.WriteLine("Imminent Danger ");
@@ -53,7 +55,11 @@ namespace HealthSystem_project
 
         static void TakeDamage(int damage)
         {
-            if (shield > 0)
+            if (0 > damage)
+            {
+                Console.WriteLine($"error can't take {damage}");
+            }
+            else if (shield > 0)
             {
                 shield -= damage;
                 if (shield <= 0)
@@ -112,10 +118,12 @@ namespace HealthSystem_project
         static void IncreaseXP(int exp)
         {
             xp += exp;
-            int xprequierd = 100;
+            
             if (xp >= xprequierd)
             {
                 level += 1;
+                xp -= xprequierd;
+                xprequierd += 100;
             }
         }
     }
