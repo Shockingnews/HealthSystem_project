@@ -11,12 +11,16 @@ namespace HealthSystem_project
         static int health = 100;
         static int shield = 50;
         static int lives = 3;
+        static int xp = 0;
+        static int level = 1;
         static void Main(string[] args)
         {
             //
             //
             //
             TakeDamage(200);
+            Heal(50);
+            RegenerateShield(200);
             ShowHUD();
 
 
@@ -73,6 +77,45 @@ namespace HealthSystem_project
                 lives -= 1;
                 health = 100;
                 Console.WriteLine($"Lost a life you have {lives} lives left");
+            }
+        }
+        static void Heal(int hp)
+        {
+            if (health < 100)
+            {
+                health += hp;
+                if (health > 100)
+                {
+                    health = 100;
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Health is {health} can't heal");
+            }
+        }
+        static void RegenerateShield(int hp)
+        {
+            if (shield < 100)
+            {
+                shield += hp;
+                if (shield > 100)
+                {
+                    shield = 100;
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Shield is {shield} can't regenerate");
+            }
+        }
+        static void IncreaseXP(int exp)
+        {
+            xp += exp;
+            int xprequierd = 100;
+            if (xp >= xprequierd)
+            {
+                level += 1;
             }
         }
     }
